@@ -38,13 +38,12 @@ private class CreateChatterPostHotAccountTest {
             Title = hotAccnt.Name, 
             Body = status
         ); 
-                                    
+        
         Test.startTest();
         hotAccnt.Rating = 'Hot';  
         update hotAccnt; 
         post.add(msg);  
         insert post;
-        System.debug('Current total DML statements:' +  Limits.getDMLStatements());
         Test.stopTest();
 
         List<FeedItem> hotMsg = [ 
