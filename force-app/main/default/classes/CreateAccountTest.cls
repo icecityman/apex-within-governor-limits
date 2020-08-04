@@ -11,8 +11,7 @@ private class CreateAccountTest {
             acctName, 
             acctNumber 
         );
-        insert acct;
-        System.debug('Current total DML statements:' +  Limits.getDMLStatements()); 
+        insert acct; 
         Test.stopTest();
 
         List<Account> acnts = [ 
@@ -20,8 +19,8 @@ private class CreateAccountTest {
             FROM Account 
             WHERE Id = :acct.Id 
         ];
-        System.assertEquals(1, acnts.size(), 'Find new account'); 
-        System.assertEquals(acctName, acnts[0].Name, 'Test Account');
-        System.assertEquals(acctNumber, acnts[0].AccountNumber, '123 Best Company');
+        System.assertEquals( 1, acnts.size(), 'Couldn\t find a new account' ); 
+        System.assertEquals( acctName, acnts[0].Name, 'Test Account' );
+        System.assertEquals( acctNumber, acnts[0].AccountNumber, '123 Best Company' ); 
     }
 }
