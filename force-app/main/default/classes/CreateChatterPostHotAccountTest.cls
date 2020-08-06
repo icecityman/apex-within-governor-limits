@@ -44,6 +44,7 @@ private class CreateChatterPostHotAccountTest {
         update hotAccnt; 
         post.add(msg);  
         insert post;
+        system.debug('Get org limits: ' +  Limits.getLimitDmlRows());
         Test.stopTest();
 
         List<FeedItem> hotMsg = [ 
