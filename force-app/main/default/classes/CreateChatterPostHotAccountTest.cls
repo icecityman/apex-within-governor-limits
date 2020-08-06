@@ -43,8 +43,7 @@ private class CreateChatterPostHotAccountTest {
         hotAccnt.Rating = 'Hot';  
         update hotAccnt; 
         post.add(msg);  
-        insert post;
-        system.debug('Get org limits: ' +  Limits.getLimitDmlRows());
+        insert post; 
         Test.stopTest();
 
         List<FeedItem> hotMsg = [ 

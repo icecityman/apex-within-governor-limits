@@ -12,8 +12,7 @@ public without sharing class CreateChatterPostHotAccount {
             CollaborationGroup chatterGroup = [
                 SELECT Id 
                 FROM CollaborationGroup 
-                WHERE Name = 'Hot Accounts'
-                LIMIT 1
+                WHERE Id = '0F96g000000hkTiCAI'
             ];
             String status = acct.Id + ' ' + acct.Name + ' This Account is HOT! ';
             FeedItem msg = new FeedItem(
